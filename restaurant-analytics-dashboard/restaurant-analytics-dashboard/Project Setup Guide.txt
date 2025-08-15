@@ -1,0 +1,29 @@
+Project Setup Guide
+
+Backend Setup
+
+GOTO PATH restaurant-analytics-dashboard\restaurant-analytics-dashboard\backend\backend-api
+
+1. Edit .env file for database
+   - For MySQL → set DB details (host, name, user, password)
+   - For SQLite → set DB_DATABASE to file path and create file:
+     touch database/database.sqlite
+
+2. Run migrations & seed mock data[If data is changed]
+   php artisan migrate
+   php artisan db:seed --class=MockDataSeeder
+
+3. Start Laravel backend
+   php artisan serve
+   Open → http://127.0.0.1:8000/api/restaurants
+
+
+Frontend Setup
+
+GOTO PATH restaurant-analytics-dashboard\restaurant-analytics-dashboard\frontend
+
+1. 
+    Unzip node-modules in the same folder
+    Run frontend
+    npm run dev
+    Open → http://localhost:3000
